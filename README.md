@@ -15,6 +15,12 @@ Then in your awesome module:
 
 [MIT](https://opensource.org/licenses/MIT)
 
-## Author
+## Npm package
+
+[npmjs.com](https://npmjs.com/package/quantum-generator)
+
+## Authors
 
 [davidhq](https://github.com/davidhq)
+
+[sebpearce](https://github.com/sebpearce)
