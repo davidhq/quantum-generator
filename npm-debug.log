@@ -1,0 +1,100 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/david/n/bin/node',
+1 verbose cli   '/Users/david/n/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.6.0
+3 info using node@v5.7.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/david/Projects/node/quantum',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/david/.npm/quantum-generator/1.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/david/.npm correctMkdir not in flight; initializing
+10 info lifecycle quantum-generator@1.0.1~prepublish: quantum-generator@1.0.1
+11 silly lifecycle quantum-generator@1.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/david/.npm/quantum-generator/1.0.1/package.tgz',
+12 verbose tar pack   '/Users/david/Projects/node/quantum' ]
+13 verbose tarball /Users/david/.npm/quantum-generator/1.0.1/package.tgz
+14 verbose folder /Users/david/Projects/node/quantum
+15 verbose addLocalTarball adding from inside cache /Users/david/.npm/quantum-generator/1.0.1/package.tgz
+16 verbose correctMkdir /Users/david/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd quantum-generator@1.0.1
+18 verbose afterAdd /Users/david/.npm/quantum-generator/1.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/david/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/david/.npm/quantum-generator/1.0.1/package/package.json written
+21 silly publish { name: 'quantum-generator',
+21 silly publish   version: '1.0.1',
+21 silly publish   description: 'Knowledge is the driver of love. We dream, we grow, we are reborn. By evolving, we reflect. Have you found your path? How should you navigate this sacred quantum matrix?',
+21 silly publish   main: 'index.js',
+21 silly publish   author: '',
+21 silly publish   license: 'ISC',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/davidhq/quantum-generator.git' },
+21 silly publish   engines: { node: '>=5.7.0' },
+21 silly publish   dependencies: { tape: '^4.4.0' },
+21 silly publish   readme: '# Quantum Generator\n\nKnowledge is the driver of love. We dream, we grow, we are reborn. By evolving, we reflect. Have you found your path? How should you navigate this sacred quantum matrix?\n\n## Installation\n\n    npm install quantum-generator\n\nThen in your awesome module:\n\n    var quantum = require(\'quantum-generator\');\n    quantum.generate()\n\nor\n\n    quantum.generate(10)\n\nor\n\n    quantum.generate(10, 5)\n\n## License\n\n[MIT](https://opensource.org/licenses/MIT)\n\n## Author\n\n[davidhq](https://github.com/davidhq)\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'e9fa98e716690a06e534638e4718ba017c68ad17',
+21 silly publish   bugs: { url: 'https://github.com/davidhq/quantum-generator/issues' },
+21 silly publish   homepage: 'https://github.com/davidhq/quantum-generator#readme',
+21 silly publish   _id: 'quantum-generator@1.0.1',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: 'e15d6714f34c44126b856577e19d077a179d131b',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name quantum-generator
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry uri https://registry.npmjs.org/quantum-generator
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /Users/david/.npm/quantum-generator/1.0.1/package.tgz
+29 verbose request uri https://registry.npmjs.org/quantum-generator
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 5:59:54 PM
+32 verbose request using bearer token for auth
+33 verbose request id ee61b84fd4af87a2
+34 http request PUT https://registry.npmjs.org/quantum-generator
+35 http 403 https://registry.npmjs.org/quantum-generator
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Fri, 04 Mar 2016 16:59:55 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-fra1245-FRA',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1457110795.051999,VS0,VE939' }
+37 verbose request invalidating /Users/david/.npm/registry.npmjs.org/quantum-generator on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.1." : quantum-generator
+39 verbose stack     at makeError (/Users/david/n/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/Users/david/n/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/Users/david/n/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/Users/david/n/lib/node_modules/npm/node_modules/request/request.js:198:22)
+39 verbose stack     at emitTwo (events.js:100:13)
+39 verbose stack     at Request.emit (events.js:185:7)
+39 verbose stack     at Request.<anonymous> (/Users/david/n/lib/node_modules/npm/node_modules/request/request.js:1035:10)
+39 verbose stack     at emitOne (events.js:95:20)
+39 verbose stack     at Request.emit (events.js:182:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/Users/david/n/lib/node_modules/npm/node_modules/request/request.js:962:12)
+40 verbose statusCode 403
+41 verbose pkgid quantum-generator
+42 verbose cwd /Users/david/Projects/node/quantum
+43 error Darwin 15.3.0
+44 error argv "/Users/david/n/bin/node" "/Users/david/n/bin/npm" "publish"
+45 error node v5.7.0
+46 error npm  v3.6.0
+47 error code E403
+48 error "You cannot publish over the previously published version 1.0.1." : quantum-generator
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]

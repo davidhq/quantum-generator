@@ -1,11 +1,11 @@
 /*
  * vocab.js
  * Vocabulary words to be used in sentence patterns (patterns.js)
- * 
+ *
  * New Age Bullshit Generator
  * © 2014 Seb Pearce (sebpearce.com)
  * Licensed under the MIT License.
- * 
+ *
  */
 
 var nCosmos = [
@@ -485,7 +485,22 @@ var vTraverse = [
 ];
 
 
-
+module.exports = {
+  nCosmos,
+  nPerson,
+  nPersonPlural,
+  nMass,
+  nMassBad,
+  nOurPlural,
+  nPath,
+  nOf,
+  ing,
+  adj,
+  adjBig,
+  adjWith, adjPrefix, vtMass, vtPerson, viPerson, vtDestroy, nTheXOf, ppPerson,
+  ppThingPrep, fixedAdvP, fixedAdvPPlace, fixedNP,
+  nSubject, vOpenUp, vTraverse
+}
 
 
 

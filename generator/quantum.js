@@ -1,11 +1,13 @@
 /*
  * main.js
- * 
+ *
  * New Age Bullshit Generator
  * © 2014 Seb Pearce (sebpearce.com)
  * Licensed under the MIT License.
- * 
+ *
  */
+
+ var vocab = require('./vocab/vocab')
 
 // deepCopy function taken from:
 // http://james.padolsey.com/javascript/deep-copying-of-objects-and-arrays/
@@ -27,7 +29,7 @@ function deepCopy(obj) {
     return obj;
 }
 
-function removeSentence(topic, element) {
+function removeSentence(sentencePatternsClone, topic, element) {
 
   if (element > -1) {
     sentencePatternsClone[topic].splice(element, 1);
@@ -54,14 +56,14 @@ function retrieveRandomWordOfType(type) {
 
   var result = type[rand];
 
-  // type.splice(rand,1); 
+  // type.splice(rand,1);
   // console.log(type);
 
   return result;
 
 }
 
-function generateSentence(topic) {
+function generateSentence(sentencePatternsClone, topic) {
 
   var length = sentencePatternsClone[topic].length;
 
@@ -82,7 +84,7 @@ function generateSentence(topic) {
   var pattern = pattern.split(' ');
 
   // remove the pattern from the sentence array so it isn't re-used
-  removeSentence(topic, patternNumber);
+  removeSentence(sentencePatternsClone, topic, patternNumber);
 
   // console.log('sentencePatternsClone.length is now ' + sentencePatternsClone.length);
   if (sentencePatternsClone[topic].length == 0) {
@@ -96,57 +98,57 @@ function generateSentence(topic) {
   for (var x in pattern) {
 
     switch (pattern[x]) {
-      case 'nCosmos': result += retrieveRandomWordOfType(nCosmos);
+      case 'nCosmos': result += retrieveRandomWordOfType(vocab.nCosmos);
       break;
-      case 'nPerson': result += retrieveRandomWordOfType(nPerson);
+      case 'nPerson': result += retrieveRandomWordOfType(vocab.nPerson);
       break;
-      case 'nPersonPlural': result += retrieveRandomWordOfType(nPersonPlural);
+      case 'nPersonPlural': result += retrieveRandomWordOfType(vocab.nPersonPlural);
       break;
-      case 'nMass': result += retrieveRandomWordOfType(nMass);
+      case 'nMass': result += retrieveRandomWordOfType(vocab.nMass);
       break;
-      case 'nMassBad': result += retrieveRandomWordOfType(nMassBad);
+      case 'nMassBad': result += retrieveRandomWordOfType(vocab.nMassBad);
       break;
-      case 'nPath': result += retrieveRandomWordOfType(nPath);
+      case 'nPath': result += retrieveRandomWordOfType(vocab.nPath);
       break;
-      case 'nOurPlural': result += retrieveRandomWordOfType(nOurPlural);
+      case 'nOurPlural': result += retrieveRandomWordOfType(vocab.nOurPlural);
       break;
-      case 'nOf': result += retrieveRandomWordOfType(nOf);
+      case 'nOf': result += retrieveRandomWordOfType(vocab.nOf);
       break;
-      case 'ing': result += retrieveRandomWordOfType(ing);
+      case 'ing': result += retrieveRandomWordOfType(vocab.ing);
       break;
-      case 'adj': result += retrieveRandomWordOfType(adj);
+      case 'adj': result += retrieveRandomWordOfType(vocab.adj);
       break;
-      case 'adjBig': result += retrieveRandomWordOfType(adjBig);
+      case 'adjBig': result += retrieveRandomWordOfType(vocab.adjBig);
       break;
-      case 'adjWith': result += retrieveRandomWordOfType(adjWith);
+      case 'adjWith': result += retrieveRandomWordOfType(vocab.adjWith);
       break;
-      case 'adjPrefix': result += retrieveRandomWordOfType(adjPrefix);
+      case 'adjPrefix': result += retrieveRandomWordOfType(vocab.adjPrefix);
       break;
-      case 'vtMass': result += retrieveRandomWordOfType(vtMass);
+      case 'vtMass': result += retrieveRandomWordOfType(vocab.vtMass);
       break;
-      case 'vtPerson': result += retrieveRandomWordOfType(vtPerson);
+      case 'vtPerson': result += retrieveRandomWordOfType(vocab.vtPerson);
       break;
-      case 'vtDestroy': result += retrieveRandomWordOfType(vtDestroy);
+      case 'vtDestroy': result += retrieveRandomWordOfType(vocab.vtDestroy);
       break;
-      case 'viPerson': result += retrieveRandomWordOfType(viPerson);
+      case 'viPerson': result += retrieveRandomWordOfType(vocab.viPerson);
       break;
-      case 'nTheXOf': result += retrieveRandomWordOfType(nTheXOf);
+      case 'nTheXOf': result += retrieveRandomWordOfType(vocab.nTheXOf);
       break;
-      case 'ppPerson': result += retrieveRandomWordOfType(ppPerson);
+      case 'ppPerson': result += retrieveRandomWordOfType(vocab.ppPerson);
       break;
-      case 'ppThingPrep': result += retrieveRandomWordOfType(ppThingPrep);
+      case 'ppThingPrep': result += retrieveRandomWordOfType(vocab.ppThingPrep);
       break;
-      case 'fixedAdvP': result += retrieveRandomWordOfType(fixedAdvP);
+      case 'fixedAdvP': result += retrieveRandomWordOfType(vocab.fixedAdvP);
       break;
-      case 'fixedAdvPPlace': result += retrieveRandomWordOfType(fixedAdvPPlace);
+      case 'fixedAdvPPlace': result += retrieveRandomWordOfType(vocab.fixedAdvPPlace);
       break;
-      case 'fixedNP': result += retrieveRandomWordOfType(fixedNP);
-      break;      
-      case 'nSubject': result += retrieveRandomWordOfType(nSubject);
+      case 'fixedNP': result += retrieveRandomWordOfType(vocab.fixedNP);
       break;
-      case 'vOpenUp': result += retrieveRandomWordOfType(vOpenUp);
-      break;      
-      case 'vTraverse': result += retrieveRandomWordOfType(vTraverse);
+      case 'nSubject': result += retrieveRandomWordOfType(vocab.nSubject);
+      break;
+      case 'vOpenUp': result += retrieveRandomWordOfType(vocab.vOpenUp);
+      break;
+      case 'vTraverse': result += retrieveRandomWordOfType(vocab.vTraverse);
       break;
       default: result += pattern[x];
     }
@@ -172,10 +174,11 @@ function generateSentence(topic) {
 function generateText(numberOfSentences, sentenceTopic) {
 
   var fullText = "";
+  var sentencePatternsClone = deepCopy(require('./vocab/patterns'));
 
   for (var i = 0; i < numberOfSentences; i++) {
 
-    fullText += generateSentence(sentenceTopic);
+    fullText += generateSentence(sentencePatternsClone, sentenceTopic);
 
     // in case the topic got deleted
     if (typeof sentencePatternsClone[sentenceTopic] == 'undefined') {
@@ -183,7 +186,7 @@ function generateText(numberOfSentences, sentenceTopic) {
       // console.log('topic reset to ' + sentenceTopic);
     }
 
-  } 
+  }
 
   // replace 'a [vowel]' with 'an [vowel]'
   // I added a \W before the [Aa] because one time I got
@@ -197,43 +200,31 @@ function generateText(numberOfSentences, sentenceTopic) {
 
 }
 
-$('.topbar button').click(function(){
 
-  sentencePatternsClone = deepCopy(sentencePatterns);
+  // // generate random topic
+  // var sentenceTopic = 0;
 
-  // generate random topic
-  var sentenceTopic = 0;
+  // $('h1').text(generateText(1, sentenceTopic));
 
-  $('h1').text(generateText(1, sentenceTopic));
+  // $('h2').text(generateText(2, sentenceTopic));
 
-  $('h2').text(generateText(2, sentenceTopic));
+  // sentenceTopic = randomInt(sentencePatternsClone.length - 2);
 
-  sentenceTopic = randomInt(sentencePatternsClone.length - 2);
-
-  $('h3').text(generateText(1, sentenceTopic));
+  // $('h3').text(generateText(1, sentenceTopic));
 
 
-  $('p').each(function( i ) {
-    sentenceTopic = randomInt(sentencePatternsClone.length - 1);
-    $(this).text(generateText(3, sentenceTopic));
-  });
+  // $('p').each(function( i ) {
+  //   sentenceTopic = randomInt(sentencePatternsClone.length - 1);
+  //   $(this).text(generateText(3, sentenceTopic));
+  // });
 
-  sentenceTopic = randomInt(sentencePatternsClone.length - 1);
+  // sentenceTopic = randomInt(sentencePatternsClone.length - 1);
 
-  $('blockquote').text(generateText(1, sentenceTopic));
-
-  // change image
-  $('img').hide();
-  $('img').attr('src', 'http://placeimg.com/640/480/nature');
-  $('img').fadeIn(400);
+  // $('blockquote').text(generateText(1, sentenceTopic));
 
 
-});
+module.exports = { generate: generateText }
 
-
-$(document).ready(function() {
-
-});
 
 
 
