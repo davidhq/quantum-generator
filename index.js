@@ -1,9 +1,12 @@
 "use strict"
 
-let quantum = require('./generator/quantum.js')
-//let business = require('./generator/business.js')
+let topics = require('./topics.js')
+
+let quantum = require('./generators/quantum.js')
+let business = require('./generators/business.js')
 
 module.exports = {
-  quantum: quantum
-  //business: business
+  quantum,
+  business,
+  topics
 }

@@ -173,6 +173,14 @@ function generateSentence(sentencePatternsClone, topic) {
 
 function generateText(numberOfSentences, sentenceTopic) {
 
+  // nice trick
+  switch(arguments.length) {
+    case 0: numberOfSentences = 2
+    case 1: sentenceTopic = 3
+    case 2: break;
+    default: throw new Error('illegal argument count')
+  }
+
   var fullText = "";
   var sentencePatternsClone = deepCopy(require('./vocab/patterns'));
 
