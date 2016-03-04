@@ -1,6 +1,6 @@
 # Quantum Generator
 
-Knowledge is the driver of love. We dream, we grow, we are reborn. By evolving, we reflect. Have you found your path? How should you navigate this sacred quantum matrix?
+How should you navigate this sacred quantum matrix?
 
 ## Installation
 
