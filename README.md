@@ -1,10 +1,10 @@
 # Quantum Generator
 
-How should you navigate this sacred quantum matrix?
+### How should you navigate this sacred quantum matrix?
+
+Astral projection may be the solution to what’s holding you back from a staggering rebirth of rebirth. Through feng shui, our hearts are engulfed in knowledge. As you heal, you will enter into infinite inseparability that transcends understanding. You will soon be reborn by a power deep within yourself — a power that is unrestricted, quantum. It is a sign of things to come. This circuit never ends. The fount of peace is now happening worldwide. It is time to take beauty to the next level. Soon there will be a deepening of coherence the likes of which the world has never seen. The future will be a divine unfolding.
 
 ## Global installation
-
-Go to your node project, then:
 
 ```
 npm install -g quantum-generator
