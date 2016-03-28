@@ -2,5 +2,6 @@
 "use strict"
 var generator = require("./index")
 var topics = require("./topics")
+var colors = require("colors");
 
-console.log(generator.quantum.generate(10, topics.quantum.sellingPoint))
+console.log(colors.magenta(generator.quantum.generate(10, topics.quantum.sellingPoint)))

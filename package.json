@@ -1,6 +1,6 @@
 {
   "name": "quantum-generator",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "How should you navigate this sacred quantum matrix?",
   "main": "index.js",
   "author": "",
@@ -16,6 +16,7 @@
     "quantum": "generate.js"
   },
   "dependencies": {
+    "colors": "^1.1.2",
     "tape": "^4.4.0"
   }
 }
