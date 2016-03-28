@@ -2,11 +2,27 @@
 
 How should you navigate this sacred quantum matrix?
 
-## Installation
+## Global installation
 
 Go to your node project, then:
 
-```javascript
+```
+npm install -g quantum-generator
+```
+
+Then
+
+```
+quantum
+```
+
+to receive ten sentences of quantum wisdom.
+
+## Installation in you project
+
+Go to your node project, then:
+
+```
 npm install quantum-generator
 ```
 

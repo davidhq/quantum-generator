@@ -12,6 +12,9 @@
   "engines": {
     "node": ">=5.7.0"
   },
+  "bin": {
+    "quantum": "generate.js"
+  },
   "dependencies": {
     "tape": "^4.4.0"
   }
