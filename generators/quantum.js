@@ -204,7 +204,7 @@ function generateText(numberOfSentences, sentenceTopic) {
   // take care of prefixes (delete the space after the hyphen)
   fullText = fullText.replace(/- /g,'-');
 
-  return fullText;
+  return fullText.trim();
 
 }
 
