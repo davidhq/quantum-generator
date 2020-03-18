@@ -2,7 +2,9 @@
 
 ### How should you navigate this sacred quantum matrix?
 
-Astral projection may be the solution to what’s holding you back from a staggering rebirth of rebirth. Through feng shui, our hearts are engulfed in knowledge. As you heal, you will enter into infinite inseparability that transcends understanding. You will soon be reborn by a power deep within yourself — a power that is unrestricted, quantum. It is a sign of things to come. This circuit never ends. The fount of peace is now happening worldwide. It is time to take beauty to the next level. Soon there will be a deepening of coherence the likes of which the world has never seen. The future will be a divine unfolding.
+You will soon be reborn by a power deep within yourself — a power that is non-local, non-local. As you self-actualize, you will enter into infinite learning that transcends understanding. Child, look within and inspire yourself. How should you navigate this Vedic quantum matrix? Astral projection may be the solution to what’s holding you back from an enormous lightning bolt of potential.
+
+We must learn how to lead spiritual lives in the face of delusion. We can no longer afford to live with discontinuity. It is time to take wisdom to the next level. It can be difficult to know where to begin. Nothing is impossible.
 
 ## Global installation
 
@@ -28,24 +30,24 @@ npm install quantum-generator
 
 ## Usage
 
-Then in your awesome module:
+Generate a sentence:
 
 ```javascript
-var quantum = require('quantum-generator').quantum
-console.log(quantum.generate())
+import quantum from 'quantum-generator'
+console.log(quantum());
 ```
 
 Generate five sentences:
 
 ```javascript
-console.log(quantum.generate(5))
+console.log(quantum({ numSentences: 5 }))
 ```
 
 on different topics:
 
 ```javascript
-var topics = require('quantum-generator').topics
-console.log(quantum.generate(2, topics.quantum.sellingPoint))
+import quantum from 'quantum-generator';
+console.log(quantum({ numSenteces: 2, topic: quantum.topics.sellingPoint }))
 ```
 
 Quantum topics:
@@ -56,15 +58,6 @@ Quantum topics:
   - youAndYourProblems
   - history
   - sellingPoint
-
-### ES6 import
-
-```javascript
-let { quantum, business } = require("quantum-generator")
-
-console.log(quantum.generate())
-console.log(business.generate())
-```
 
 ## License
 

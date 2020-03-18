@@ -8,7 +8,7 @@
  *
  */
 
-var nCosmos = [
+const nCosmos = [
   'cosmos',
   'quantum soup',
   'infinite',
@@ -27,18 +27,9 @@ var nCosmos = [
   'dreamscape'
 ];
 
-var nPerson = [
-  'being',
-  'child',
-  'traveller',
-  'entity',
-  'lifeform',
-  'wanderer',
-  'visitor',
-  'prophet'
-];
+const nPerson = ['being', 'child', 'traveller', 'entity', 'lifeform', 'wanderer', 'visitor', 'prophet'];
 
-var nPersonPlural = [
+const nPersonPlural = [
   'beings',
   // 'children',
   'travellers',
@@ -53,7 +44,7 @@ var nPersonPlural = [
   'storytellers'
 ];
 
-var nMass = [
+const nMass = [
   'consciousness',
   'nature',
   'beauty',
@@ -121,7 +112,7 @@ var nMass = [
   'serenity'
 ];
 
-var nMassBad = [
+const nMassBad = [
   'turbulence',
   'pain',
   'suffering',
@@ -139,31 +130,11 @@ var nMassBad = [
   'materialism'
 ];
 
-var nOurPlural = [
-  'souls',
-  'lives',
-  'dreams',
-  'hopes',
-  'bodies',
-  'hearts',
-  'brains',
-  'third eyes',
-  'essences',
-  'chakras'
-];
+const nOurPlural = ['souls', 'lives', 'dreams', 'hopes', 'bodies', 'hearts', 'brains', 'third eyes', 'essences', 'chakras'];
 
-var nPath = [
-  'circuit',
-  'mission',
-  'journey',
-  'path',
-  'quest',
-  'vision quest',
-  'story',
-  'myth'
-];
+const nPath = ['circuit', 'mission', 'journey', 'path', 'quest', 'vision quest', 'story', 'myth'];
 
-var nOf = [
+const nOf = [
   'quantum leap',
   'evolution',
   'spark',
@@ -195,7 +166,7 @@ var nOf = [
   'explosion'
 ];
 
-var ing = [
+const ing = [
   'flowering',
   'unfolding',
   'blossoming',
@@ -211,7 +182,7 @@ var ing = [
   'ennobling'
 ];
 
-var adj = [
+const adj = [
   'enlightened',
   'zero-point',
   'quantum',
@@ -267,7 +238,7 @@ var adj = [
   'sublime'
 ];
 
-var adjBig = [
+const adjBig = [
   'epic',
   'unimaginable',
   'colossal',
@@ -284,29 +255,18 @@ var adjBig = [
   'staggering'
 ];
 
-var adjWith = [
-  'aglow with',
-  'buzzing with',
-  'beaming with',
-  'full of',
-  'overflowing with',
-  'radiating',
-  'bursting with',
-  'electrified with'
-];
+const adjWith = ['aglow with', 'buzzing with', 'beaming with', 'full of', 'overflowing with', 'radiating', 'bursting with', 'electrified with'];
 
-var adjPrefix = [
-  'ultra-',
-  'supra-',
-  'hyper-',
-  'pseudo-'
-];
+const adjPrefix = ['ultra-', 'supra-', 'hyper-', 'pseudo-'];
 
-var vtMass = [
+const vtMass = [
   'inspire',
   'integrate',
   'ignite',
   'discover',
+  'contextualize',
+  'emphatize',
+  'co-create',
   'rediscover',
   'foster',
   'release',
@@ -322,7 +282,7 @@ var vtMass = [
   'leverage'
 ];
 
-var vtPerson = [
+const vtPerson = [
   'enlighten',
   'inspire',
   'empower',
@@ -340,61 +300,17 @@ var vtPerson = [
   'beckon'
 ];
 
-var viPerson = [
-  'exist',
-  'believe',
-  'grow',
-  'live',
-  'dream',
-  'reflect',
-  'heal',
-  'vibrate',
-  'self-actualize'
-];
+const viPerson = ['exist', 'believe', 'grow', 'live', 'dream', 'reflect', 'heal', 'vibrate', 'self-actualize'];
 
-var vtDestroy = [
-  'destroy',
-  'eliminate',
-  'shatter',
-  'disrupt',
-  'sabotage',
-  'exterminate',
-  'obliterate',
-  'eradicate',
-  'extinguish',
-  'erase',
-  'confront'
-];
+const vtDestroy = ['destroy', 'eliminate', 'shatter', 'disrupt', 'sabotage', 'exterminate', 'obliterate', 'eradicate', 'extinguish', 'erase', 'confront'];
 
-var nTheXOf = [
-  'richness',
-  'truth',
-  'growth',
-  'nature',
-  'healing',
-  'knowledge'
-];
+const nTheXOf = ['richness', 'truth', 'growth', 'nature', 'healing', 'knowledge'];
 
-var ppPerson = [
-  'awakened',
-  're-energized',
-  'recreated',
-  'reborn',
-  'guided',
-  'aligned'
-];
+const ppPerson = ['awakened', 're-energized', 'recreated', 'reborn', 'guided', 'aligned'];
 
-var ppThingPrep = [
-  'enveloped in',
-  'transformed into',
-  'nurtured by',
-  'opened by',
-  'immersed in',
-  'engulfed in',
-  'baptized in'
-];
+const ppThingPrep = ['enveloped in', 'transformed into', 'nurtured by', 'opened by', 'immersed in', 'engulfed in', 'baptized in'];
 
-var fixedAdvP = [
+const fixedAdvP = [
   'through non-local interactions',
   'inherent in nature',
   'at the quantum level',
@@ -402,17 +318,12 @@ var fixedAdvP = [
   'of unfathomable proportions',
   'on a cosmic scale',
   'devoid of self',
-  'of the creative act',
+  'of the creative act'
 ];
 
-var fixedAdvPPlace = [
-  'in this dimension',
-  'outside time',
-  'within the Godhead',
-  'at home in the cosmos',
-];
+const fixedAdvPPlace = ['in this dimension', 'outside time', 'within the Godhead', 'at home in the cosmos'];
 
-var fixedNP = [
+const fixedNP = [
   'expanding wave functions',
   'superpositions of possibilities',
   'electromagnetic forces',
@@ -439,7 +350,7 @@ var fixedNP = [
   'meridians'
 ];
 
-var nSubject = [
+const nSubject = [
   'alternative medicine',
   'astrology',
   'tarot',
@@ -461,7 +372,7 @@ var nSubject = [
   'the Law of Attraction'
 ];
 
-var vOpenUp = [
+const vOpenUp = [
   'open up',
   'give us access to',
   'enable us to access',
@@ -472,20 +383,9 @@ var vOpenUp = [
   'align us with'
 ];
 
-var vTraverse = [
-  'traverse',
-  'walk',
-  'follow',
-  'engage with',
-  'go along',
-  'roam',
-  'navigate',
-  'wander',
-  'embark on'
-];
+const vTraverse = ['traverse', 'walk', 'follow', 'engage with', 'go along', 'roam', 'navigate', 'wander', 'embark on'];
 
-
-module.exports = {
+export default {
   nCosmos,
   nPerson,
   nPersonPlural,
@@ -497,11 +397,19 @@ module.exports = {
   ing,
   adj,
   adjBig,
-  adjWith, adjPrefix, vtMass, vtPerson, viPerson, vtDestroy, nTheXOf, ppPerson,
-  ppThingPrep, fixedAdvP, fixedAdvPPlace, fixedNP,
-  nSubject, vOpenUp, vTraverse
-}
-
-
-
-
+  adjWith,
+  adjPrefix,
+  vtMass,
+  vtPerson,
+  viPerson,
+  vtDestroy,
+  nTheXOf,
+  ppPerson,
+  ppThingPrep,
+  fixedAdvP,
+  fixedAdvPPlace,
+  fixedNP,
+  nSubject,
+  vOpenUp,
+  vTraverse
+};

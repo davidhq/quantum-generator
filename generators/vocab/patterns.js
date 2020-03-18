@@ -8,7 +8,7 @@
  *
  */
 
-var sentencePatterns = new Array();
+const sentencePatterns = [];
 
 // explaining
 sentencePatterns[0] = [
@@ -83,7 +83,7 @@ sentencePatterns[4] = [
 // selling point
 sentencePatterns[5] = [
   'Through nSubject, our nOurPlural are ppThingPrep nMass',
-  'nSubject may be the solution to what’s holding you back from a adjBig nOf of nMass',
+  "nSubject may be the solution to what's holding you back from a adjBig nOf of nMass",
   'You will soon be ppPerson by a power deep within yourself — a power that is adj, adj',
   'As you viPerson, you will enter into infinite nMass that transcends understanding'
 ];
@@ -113,4 +113,4 @@ fixedNP
 nSubject
  */
 
- module.exports = sentencePatterns
+export default sentencePatterns;

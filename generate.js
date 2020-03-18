@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-"use strict"
-var generator = require("./index")
-var topics = require("./topics")
-var colors = require("colors");
 
-console.log(colors.magenta(generator.quantum.generate(10, topics.quantum.sellingPoint)))
+import quantum from './index.js';
+
+console.log(quantum({ numSenteces: 10 }));

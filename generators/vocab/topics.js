@@ -1,14 +1,10 @@
-"use strict"
-
-let quantum = {
+const topics = {
   explaining: 0,
   warnings: 1,
   futureHope: 2,
   youAndYourProblems: 3,
   history: 4,
   sellingPoint: 5
-}
+};
 
-module.exports = {
-  quantum
-}
+export default topics;

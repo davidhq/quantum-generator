@@ -1,8 +1,9 @@
 {
   "name": "quantum-generator",
-  "version": "1.1.5",
+  "version": "1.9.1",
   "description": "How should you navigate this sacred quantum matrix?",
   "main": "index.js",
+  "type": "module",
   "author": "",
   "license": "ISC",
   "repository": {
@@ -15,8 +16,5 @@
   "bin": {
     "quantum": "generate.js"
   },
-  "dependencies": {
-    "colors": "^1.1.2",
-    "tape": "^4.4.0"
-  }
+  "dependencies": {}
 }
