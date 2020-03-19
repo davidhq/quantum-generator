@@ -20,16 +20,26 @@ function capitalizeFirstLetter(string) {
 }
 
 function getSentencePattern(topic) {
-  //return patterns[patterns.length];
-
   const list = topic ? patterns[topic] : patterns[randomInt(patterns.length)];
 
   return list[randomInt(list.length)];
 }
 
+function hasTriggerWords(sentence, triggerWord) {
+  return sentence.match(new RegExp(`\\b${triggerWord}\\b`));
+}
+
 function concretizePattern(patternSentence) {
   for (const [triggerWord, list] of Object.entries(vocab)) {
-    patternSentence = patternSentence.replace(new RegExp(`\\b${triggerWord}\\b`, 'g'), list[randomInt(list.length)]);
+    const listClone = JSON.parse(JSON.stringify(list));
+    // todo: check if the word was already used so this doesn't happen:
+    // 'freedom is the driver of freedom'
+    // 'nMass is the driver of nMass' <-- this is the problem, 2x nMass
+    while (hasTriggerWords(patternSentence, triggerWord)) {
+      const index = randomInt(listClone.length);
+      const [word] = listClone.splice(index, 1);
+      patternSentence = patternSentence.replace(new RegExp(`\\b${triggerWord}\\b`), word);
+    }
   }
 
   return patternSentence;
@@ -71,4 +81,3 @@ function generate({ numSentences = 1, topic } = {}) {
 generate.topics = topics;
 
 export default generate;
-
