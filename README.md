@@ -43,6 +43,12 @@ Generate five sentences:
 console.log(quantum({ numSentences: 5 }))
 ```
 
+Generate five pseudo-random sentences:
+
+```javascript
+console.log(quantum({ numSentences: 5, seed: 'try_different_strings' }));
+```
+
 on different topics:
 
 ```javascript

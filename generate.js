@@ -2,4 +2,4 @@
 
 import quantum from './index.js';
 
-console.log(quantum({ numSenteces: 10 }));
+console.log(quantum({ numSentences: 10 }));
